@@ -26,7 +26,7 @@ function convertText(text) {
     let beforeText = text.substring(0, result.index);
     let listItems = result[1].trim().split(/\n-\s+/).map(item => `<li>${item}</li>`).join("");
     listItems = listItems.replaceAll("<li>:</li>", "");
-    let transformedText = `<p>${beforeText}</p><br><b>Особенности:</b><ul><br>${listItems}</ul>`;
+    let transformedText = `<p>${beforeText}</p><b>Особенности:</b><ul><br>${listItems}</ul>`;
     return transformedText;
   } else {
     return text;
