@@ -52,7 +52,7 @@ if (elBtnDesc)
 {
     elBtnDesc.click()
     elDesc = await waitElement("article[itemprop='description']")
-    elDesc.innerHTML = elDesc.innerHTML.replaceAll('h2', 'b').replaceAll('<b>Преимущества</b>', '<br><b>Преимущества</b><br>')
+    elDesc.innerHTML = elDesc.innerHTML.replaceAll('h2', 'b').replaceAll('<b>Преимущества</b>', '<b>Преимущества</b>')
     html = `${elDesc.innerHTML.trim()}<br>${html}`
 }
 else
