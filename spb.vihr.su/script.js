@@ -33,10 +33,6 @@ function convertText(text) {
   }
 }
 
-const markedScriptTag = document.createElement('script');
-markedScriptTag.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
-document.head.appendChild(markedScriptTag);
-
 let html = ""
 const elDesc = document.querySelector("div#product-description > div")
 const elNameProps = document.querySelectorAll("div#product-features td.name")
