@@ -24,19 +24,22 @@ let elValueProps = document.querySelectorAll("div.detail-info__body dd")
 
 if (elNameProps.length > 0 && elValueProps.length > 0)
 {
-    if (elNameProps.length != elValueProps.length)
+    if (elNameProps.length == elValueProps.length)
+    {
+        html += "<b>Характеристики</b><ul><br>"
+        for (let i = 0; i < elNameProps.length; i++) 
+        {
+            let elName = elNameProps[i]
+            let elValue = elValueProps[i]
+    
+            html += `<li>${elName.innerText.trim()}: ${elValue.innerText.trim()}</li>`
+        }
+        html += "</ul>"
+    }
+    else
     {
         console.trace(`Не совпадает длина хар-к (имя: значение) (${elNameProps.length}, ${elValueProps.length})`)
     }
-    html += "<b>Характеристики</b><ul><br>"
-    for (let i = 0; i < elNameProps.length; i++) 
-    {
-        let elName = elNameProps[i]
-        let elValue = elValueProps[i]
-
-        html += `<li>${elName.innerText.trim()}: ${elValue.innerText.trim()}</li>`
-    }
-    html += "</ul>"
 }
 else
 {
