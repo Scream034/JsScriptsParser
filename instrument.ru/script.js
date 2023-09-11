@@ -53,6 +53,7 @@ if (elBtnDesc) {
   elDesc = await waitElement("article[itemprop='description']");
   elDesc.innerHTML = elDesc.innerHTML
     .replaceAll("h2", "b")
+    .replaceAll("<ul>\n</ul>", "").replaceAll("<ul></ul>")
     .replaceAll("<b>Преимущества</b>", "<b>Преимущества</b>");
   html = `${elDesc.innerHTML.trim()}<br>${html}`;
 } else {
