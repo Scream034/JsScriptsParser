@@ -54,6 +54,7 @@ if (elBtnDesc) {
   elDesc.innerHTML = elDesc.innerHTML
     .replaceAll("h2", "b")
     .replaceAll("</ul>\n<ul>", "").replaceAll("</ul><ul>", "")
+    .replaceAll("</ul>\n<br>", "</ul>").replaceAll("</ul><br>", "</ul>")
     .replaceAll("<b>Преимущества</b>", "<b>Преимущества</b>");
   html = `${elDesc.innerHTML.trim()}<br>${html}`;
 } else {
