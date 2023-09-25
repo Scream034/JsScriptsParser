@@ -111,5 +111,8 @@ for (let index = 0; index < elPropNames.length; index++) {
 }
 
 text += "</ul>";
+text = text
+    .replaceAll("<br>\n<br>", "br")
+    .replaceAll("<br><br>", "br"); 
 
 text;
